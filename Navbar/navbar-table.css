@@ -1,0 +1,81 @@
+body{
+    font-family: 'Kanit', sans-serif;
+
+    background-color: #aaa;
+}
+
+.navbar{
+    background-color: #555;
+    
+    padding-right: 20px;
+    box-shadow: 2px 2px 2px 2px  #333;
+   
+}
+
+.navbar li{
+    
+    vertical-align: middle;
+    padding: 5px;
+    /* смещение-x | смещение-y | радиус-размытия | цвет */
+    text-shadow: 1px 1px 2px black;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;   
+    
+}
+
+.navbar {
+    display:  table;
+    width: 100%;
+}
+.navbar ul {
+    display: table-row;
+}
+
+.navbar li{
+    display: table-cell;
+    /* border: 2px solid red; */
+}
+
+.navbar div {
+    /* border-bottom: 2px solid blue; */
+    text-align: center;
+    width: 50px;
+}
+
+.navbar li:nth-child(4) div,
+.navbar li:nth-child(5) div{
+    /* border-bottom: 2px solid blue; */
+    text-align: center;
+    width: 70px;
+}
+.navbar li:first-child{
+    padding-right: 50px;
+    text-align: left;
+}
+
+.navbar li:last-child{
+    padding: 0 20px 0 50px;
+
+    text-align: right;
+}
+
+.navbar div::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid white;
+    padding: 3px;
+    transform: translateX(100%);
+    border-bottom-color: transparent;
+    transition: 0.5s;
+    
+}
+
+.navbar div:hover::after{
+    transform: translateX(0);
+    border-bottom-color: white;
+}
+

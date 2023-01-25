@@ -1,0 +1,47 @@
+body{
+    font-family: 'Kanit', sans-serif;
+
+    background-color: #aaa;
+}
+
+.navbar{
+    background-color: #555;
+    text-align: right;
+    padding-right: 20px;
+    box-shadow: 2px 2px 2px 2px  #333;
+   
+}
+
+.navbar li{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    /* смещение-x | смещение-y | радиус-размытия | цвет */
+    text-shadow: 1px 1px 2px black;
+    
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;    
+    
+}
+
+
+
+.navbar li::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid white;
+    padding: 3px;
+    transform: translateX(100%);
+    border-bottom-color: transparent;
+    transition: 0.5s;
+    
+}
+
+.navbar li:hover::after{
+    transform: translateX(0);
+    border-bottom-color: white;
+}
